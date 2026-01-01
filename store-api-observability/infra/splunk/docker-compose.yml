@@ -23,8 +23,8 @@ services:
       driver: splunk
       options:
         splunk-url: http://localhost:8088
-        splunk-index: logs_store_app
-        splunk-token: d31632c8-b033-416d-a2ed-2e4f8b3202cc
+        splunk-index: ${SPLUNK_INDEX:logs_splunk}
+        splunk-token: ${SPLUNK_TOKEN}
         splunk-source: store-api-observability
         splunk-format: "json"
         splunk-insecureskipverify: "true"

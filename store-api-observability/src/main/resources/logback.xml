@@ -117,9 +117,9 @@
               class="com.splunk.logging.HttpEventCollectorLogbackAppender">
 
         <url>http://localhost:8088</url>
-        <token>d31632c8-b033-416d-a2ed-2e4f8b3202cc</token>
+        <token>${SPLUNK_TOKEN}</token>
 
-        <index>logs_store_app</index>
+        <index>${SPLUNK_INDEX}</index>
         <sourcetype>logback</sourcetype>
 
         <messageFormat>json</messageFormat>
