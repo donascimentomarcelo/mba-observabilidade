@@ -13,3 +13,12 @@ management:
           server:
             requests: true
       slo[http.server.requests]: "25ms, 50ms, 100ms, 200ms, 400ms, 800ms, 1500ms"
+  prometheus:
+    metrics:
+      export:
+        pushgateway:
+          enabled: true
+          base-url: http://localhost:9091
+          shutdown-operation: POST
+          push-rate: PT1S
+          job: store-api-push

@@ -7,3 +7,9 @@ scrape_configs:
       - targets: ['host.docker.internal:8080']
         labels:
           application: 'store-api'
+
+  - job_name: 'pushgateway'
+    honor_labels: true
+    scrape_interval: 3s
+    static_configs:
+      - targets: [ 'pushgateway:9091' ]
